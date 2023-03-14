@@ -1,0 +1,4 @@
+
+.card-img img:not(.active) {
+    display: none;
+}
