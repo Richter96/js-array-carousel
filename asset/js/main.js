@@ -28,13 +28,15 @@ for (i = 0; i < immagini.length; i++) {
     // }
 }
 
-//definire immagine attiva
-    
+//definire la slide attiva
+const slideActive = document.querySelectorAll('.card-img > img')
+
 // add funtion at clic next
 document.querySelector('.next').addEventListener('click', function(){
     console.log('cliccato')
-    currentImg = document.querySelectorAll('.card-img > img')[i] 
-    console.log(currentImg);
+    let currentSlide =  slideActive
+    console.log(currentImg)
+    currentSlide.
     activeimage++
     
 
