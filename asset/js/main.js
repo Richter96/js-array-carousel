@@ -29,4 +29,7 @@ for (i = 0; i < immagini.length; i++) {
 }
 
 
+document.querySelector('.next').addEventListener('click', function(){
+    console.log('cliccato')
+})
 
