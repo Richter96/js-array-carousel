@@ -28,8 +28,15 @@ for (i = 0; i < immagini.length; i++) {
     // }
 }
 
-
+//definire immagine attiva
+    
+// add funtion at clic next
 document.querySelector('.next').addEventListener('click', function(){
     console.log('cliccato')
+    currentImg = document.querySelectorAll('.card-img > img')[i] 
+    console.log(currentImg);
+    activeimage++
+    
+
 })
 
