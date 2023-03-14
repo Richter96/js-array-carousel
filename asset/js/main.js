@@ -41,6 +41,16 @@ document.querySelector('.next').addEventListener('click', function(){
     currentSlide = slideElement[activeimage]
     currentSlide.classList.add('active')
     
+})
 
+document.querySelector('.prev').addEventListener('click', function(){
+    console.log('cliccato')
+    // selezionare la slaide attiva 
+    let currentSlide = slideElement[activeimage]
+    currentSlide.classList.remove('active')
+    activeimage--
+    currentSlide = slideElement[activeimage]
+    currentSlide.classList.add('active')
+    
 })
 
