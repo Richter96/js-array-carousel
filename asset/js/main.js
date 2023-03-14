@@ -28,16 +28,18 @@ for (i = 0; i < immagini.length; i++) {
     // }
 }
 
-//definire la slide attiva
-const slideActive = document.querySelectorAll('.card-img > img')
+//definire tutte le slide
+const slideElement = document.querySelectorAll('.card-img > img')
 
 // add funtion at clic next
 document.querySelector('.next').addEventListener('click', function(){
     console.log('cliccato')
-    let currentSlide =  slideActive
-    console.log(currentImg)
-    currentSlide.
+    // selezionare la slaide attiva 
+    let currentSlide = slideElement[activeimage]
+    currentSlide.classList.remove('active')
     activeimage++
+    currentSlide = slideElement[activeimage]
+    currentSlide.classList.add('active')
     
 
 })
