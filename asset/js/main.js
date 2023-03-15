@@ -30,29 +30,42 @@ for (i = 0; i < immagini.length; i++) {
 }
 
 //definire tutte le slide
-const slideElement = document.querySelectorAll('.card-img > img')
+const cardElement = document.querySelectorAll('.card-img > img')
+console.log(cardElement)
 
 // add funtion at clic next
 document.querySelector('.next').addEventListener('click', function () {
         console.log('cliccato')
         // selezionare la slaide attiva 
-        let currentSlide = slideElement[activeimage]
+        let currentSlide = cardElement[activeimage]
         currentSlide.classList.remove('active')
-        activeimage++
-        if (activeimage > immagini.length) {
-            
+
+        // dobbiamo controllare se il valore dell'immagine attiva è uguale al valore dell'array
+        if (activeimage === immagini.length - 1) {
+            // se si allora riportiamo il valore di activeimmage a zero.
+            activeimage = 0
+        } else {
+            // altrimenti incrementiamo
+            activeimage++
         }
-        currentSlide = slideElement[activeimage]
+        currentSlide = cardElement[activeimage]
         currentSlide.classList.add('active')
 })
 
 document.querySelector('.prev').addEventListener('click', function () {
     console.log('cliccato')
     // selezionare la slaide attiva 
-    let currentSlide = slideElement[activeimage]
+    let currentSlide = cardElement[activeimage]
     currentSlide.classList.remove('active')
-    activeimage--
-    currentSlide = slideElement[activeimage]
+
+    // DEVO VERIFICARE SE IL VALORE di activeimage è ugualea zero
+    if (activeimage === 0) {
+        activeimage = cardElement.length - 1
+    } else {
+        // se è vero active image deve essere array meno 1
+        activeimage--
+    } 
+    currentSlide = cardElement[activeimage]
     currentSlide.classList.add('active')
 
 })
